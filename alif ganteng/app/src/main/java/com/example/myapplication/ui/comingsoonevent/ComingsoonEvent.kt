@@ -32,7 +32,6 @@ class ComingsoonEvent : Fragment() {
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
 
-
         viewModel.events.observe(viewLifecycleOwner, Observer { events ->
             events?.let {
                 adapter.updateData(it)
@@ -57,8 +56,6 @@ class ComingsoonEvent : Fragment() {
                 return false
             }
         })
-
-
     }
 
     override fun onDestroyView() {

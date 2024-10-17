@@ -9,14 +9,8 @@ import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myapplication.R
-import com.example.myapplication.data.response.EventsResponse
-import com.example.myapplication.data.retrofit.ApiConfig
 import com.example.myapplication.databinding.FragmentCompletedEventBinding
 import com.example.myapplication.ui.EventsAdapter
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class CompletedEvent : Fragment() {
     private var _binding: FragmentCompletedEventBinding? = null
@@ -61,8 +55,6 @@ class CompletedEvent : Fragment() {
             }
         })
     }
-
-
 
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE

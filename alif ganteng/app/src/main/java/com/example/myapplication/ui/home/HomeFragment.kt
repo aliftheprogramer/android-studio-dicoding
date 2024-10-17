@@ -6,20 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myapplication.data.response.EventsResponse
-import com.example.myapplication.data.retrofit.ApiConfig
 import com.example.myapplication.databinding.FragmentHomeBinding
 import com.example.myapplication.ui.EventsAdapter
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
-@Suppress("SameParameterValue")
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private val viewModel: HomeViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,63 +32,38 @@ class HomeFragment : Fragment() {
         binding.recyclerViewActiveEvents.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.recyclerViewCompletedEvents.layoutManager = LinearLayoutManager(context)
 
+        val activeEventsAdapter = EventsAdapter(emptyList())
+        val completedEventsAdapter = EventsAdapter(emptyList())
 
-        showLoading(true) // Show loading indicator before starting data fetch
-        fetchActiveEvents()
-        fetchCompletedEvents()
+        binding.recyclerViewActiveEvents.adapter = activeEventsAdapter
+        binding.recyclerViewCompletedEvents.adapter = completedEventsAdapter
 
-    }
-
-    private fun fetchActiveEvents() {
-        val client = ApiConfig.getApiService().getActiveEvents()
-        client.enqueue(object : Callback<EventsResponse> {
-            override fun onResponse(call: Call<EventsResponse>, response: Response<EventsResponse>) {
-                if (response.isSuccessful) {
-                    val events = response.body()?.events?.take(5) ?: listOf()
-                    binding.recyclerViewActiveEvents.adapter = EventsAdapter(events)
-                } else {
-                    showErrorToast()
-                }
-            }
-
-            override fun onFailure(call: Call<EventsResponse>, t: Throwable) {
-                showErrorToast()
+        viewModel.activeEvents.observe(viewLifecycleOwner, Observer { events ->
+            events?.let {
+                activeEventsAdapter.updateData(it)
             }
         })
-    }
 
-    private fun fetchCompletedEvents() {
-        val client = ApiConfig.getApiService().getCompletedEvents()
-        client.enqueue(object : Callback<EventsResponse> {
-            override fun onResponse(call: Call<EventsResponse>, response: Response<EventsResponse>) {
-                if (response.isSuccessful) {
-                    val events = response.body()?.events?.take(5) ?: listOf()
-                    binding.recyclerViewCompletedEvents.adapter = EventsAdapter(events)
-                } else {
-                    showErrorToast()
-                }
-            }
-
-            override fun onFailure(call: Call<EventsResponse>, t: Throwable) {
-                showErrorToast()
+        viewModel.completedEvents.observe(viewLifecycleOwner, Observer { events ->
+            events?.let {
+                completedEventsAdapter.updateData(it)
             }
         })
+
+        viewModel.isLoading.observe(viewLifecycleOwner, Observer { isLoading ->
+            showLoading(isLoading)
+        })
+
+        viewModel.fetchActiveEvents()
+        viewModel.fetchCompletedEvents()
     }
 
-    private fun showErrorToast() {
-        Toast.makeText(context, "Failed to fetch events", Toast.LENGTH_SHORT).show()
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-    private fun showLoading(isLoading: Boolean) {
-        if (isLoading) {
-            binding.progressBar.visibility = View.VISIBLE
-        } else {
-            binding.progressBar.visibility = View.GONE
-        }
-    }
-
 }
