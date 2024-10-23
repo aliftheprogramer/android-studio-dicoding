@@ -11,18 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!-- Progress Bar for Active Events -->
         <ProgressBar
-            android:id="@+id/progressBar"
+            android:id="@+id/progressBarActive"
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             tools:visibility="visible" />
 
+        <!-- Label for Active Events -->
         <TextView
             android:id="@+id/activeEventsLabel"
             android:layout_width="wrap_content"
@@ -30,11 +31,12 @@
             android:text="@string/active_events"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressBarActive"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:padding="16dp" />
 
+        <!-- RecyclerView for Active Events -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewActiveEvents"
             android:layout_width="0dp"
@@ -45,6 +47,19 @@
             android:padding="16dp"
             tools:listitem="@layout/item_events" />
 
+        <!-- Progress Bar for Completed Events -->
+        <ProgressBar
+            android:id="@+id/progressBarCompleted"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewActiveEvents"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:visibility="visible" />
+
+        <!-- Label for Completed Events -->
         <TextView
             android:id="@+id/completedEventsLabel"
             android:layout_width="wrap_content"
@@ -52,11 +67,12 @@
             android:text="@string/completed_events"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/recyclerViewActiveEvents"
+            app:layout_constraintTop_toBottomOf="@id/progressBarCompleted"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:padding="16dp" />
 
+        <!-- RecyclerView for Completed Events -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewCompletedEvents"
             android:layout_width="0dp"

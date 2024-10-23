@@ -18,11 +18,16 @@ class HomeViewModel : ViewModel() {
     private val _completedEvents = MutableLiveData<List<Event>>()
     val completedEvents: LiveData<List<Event>> = _completedEvents
 
-    private val _isLoading = MutableLiveData<Boolean>()
-    val isLoading: LiveData<Boolean> = _isLoading
+    // Indikator loading terpisah
+    private val _isLoadingActive = MutableLiveData<Boolean>()
+    val isLoadingActive: LiveData<Boolean> = _isLoadingActive
 
+    private val _isLoadingCompleted = MutableLiveData<Boolean>()
+    val isLoadingCompleted: LiveData<Boolean> = _isLoadingCompleted
+
+    // Fungsi untuk memuat active events
     fun fetchActiveEvents() {
-        _isLoading.value = true
+        _isLoadingActive.value = true
         val client = ApiConfig.getApiService().getActiveEvents()
         client.enqueue(object : Callback<EventsResponse> {
             override fun onResponse(call: Call<EventsResponse>, response: Response<EventsResponse>) {
@@ -32,19 +37,20 @@ class HomeViewModel : ViewModel() {
                     Log.e("HomeViewModel", "Error: ${response.errorBody()?.string()}")
                     _activeEvents.value = listOf()
                 }
-                _isLoading.value = false
+                _isLoadingActive.value = false
             }
 
             override fun onFailure(call: Call<EventsResponse>, t: Throwable) {
                 Log.e("HomeViewModel", "Failure: ${t.message}")
                 _activeEvents.value = listOf()
-                _isLoading.value = false
+                _isLoadingActive.value = false
             }
         })
     }
 
+    // Fungsi untuk memuat completed events
     fun fetchCompletedEvents() {
-        _isLoading.value = true
+        _isLoadingCompleted.value = true
         val client = ApiConfig.getApiService().getCompletedEvents()
         client.enqueue(object : Callback<EventsResponse> {
             override fun onResponse(call: Call<EventsResponse>, response: Response<EventsResponse>) {
@@ -54,13 +60,13 @@ class HomeViewModel : ViewModel() {
                     Log.e("HomeViewModel", "Error: ${response.errorBody()?.string()}")
                     _completedEvents.value = listOf()
                 }
-                _isLoading.value = false
+                _isLoadingCompleted.value = false
             }
 
             override fun onFailure(call: Call<EventsResponse>, t: Throwable) {
                 Log.e("HomeViewModel", "Failure: ${t.message}")
                 _completedEvents.value = listOf()
-                _isLoading.value = false
+                _isLoadingCompleted.value = false
             }
         })
     }

@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -29,37 +28,52 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Set layout managers
         binding.recyclerViewActiveEvents.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.recyclerViewCompletedEvents.layoutManager = LinearLayoutManager(context)
 
+        // Set adapters
         val activeEventsAdapter = EventsAdapter(emptyList())
         val completedEventsAdapter = EventsAdapter(emptyList())
 
         binding.recyclerViewActiveEvents.adapter = activeEventsAdapter
         binding.recyclerViewCompletedEvents.adapter = completedEventsAdapter
 
+        // Observe data for active events
         viewModel.activeEvents.observe(viewLifecycleOwner, Observer { events ->
             events?.let {
                 activeEventsAdapter.updateData(it)
             }
         })
 
+        // Observe data for completed events
         viewModel.completedEvents.observe(viewLifecycleOwner, Observer { events ->
             events?.let {
                 completedEventsAdapter.updateData(it)
             }
         })
 
-        viewModel.isLoading.observe(viewLifecycleOwner, Observer { isLoading ->
-            showLoading(isLoading)
+        // Observe loading status for active events
+        viewModel.isLoadingActive.observe(viewLifecycleOwner, Observer { isLoading ->
+            showActiveEventsLoading(isLoading)
         })
 
+        // Observe loading status for completed events
+        viewModel.isLoadingCompleted.observe(viewLifecycleOwner, Observer { isLoading ->
+            showCompletedEventsLoading(isLoading)
+        })
+
+        // Fetch data
         viewModel.fetchActiveEvents()
         viewModel.fetchCompletedEvents()
     }
 
-    private fun showLoading(isLoading: Boolean) {
-        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    private fun showActiveEventsLoading(isLoading: Boolean) {
+        binding.progressBarActive.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+
+    private fun showCompletedEventsLoading(isLoading: Boolean) {
+        binding.progressBarCompleted.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     override fun onDestroyView() {
