@@ -27,7 +27,7 @@ class EventsAdapter(private var events: List<Event>) : RecyclerView.Adapter<Even
         holder.bind(event)
         holder.itemView.setOnClickListener {
             val bundle = Bundle().apply {
-                putParcelable("event", event)
+                putInt("eventId", event.id)
             }
             it.findNavController().navigate(R.id.action_completedEvent_to_eventDetailFragment, bundle)
         }

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DicodingEvent</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="coming_soon_event">Coming soon event</string>
+    <string name="completed_event">Completed event</string>
+    <string name="favorite">favorite</string>
+    <string name="setting">setting</string>
+    <string name="favorite_event">favorite event</string>
+    <string name="event_detail">detail event\n</string>
+    <string name="open_event_link">menuju link\n</string>
+</resources>

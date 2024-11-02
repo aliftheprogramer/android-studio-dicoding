@@ -1,27 +1,36 @@
-@file:Suppress("DEPRECATION")
-
 package com.example.myapplication.ui.detail
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.example.myapplication.R
+import com.example.myapplication.data.database.FavoriteEvent
 import com.example.myapplication.data.response.Event
 import com.example.myapplication.databinding.FragmentEventDetailBinding
+import com.example.myapplication.ui.favorite.FavoriteEventViewModel
+import com.example.myapplication.ui.home.HomeViewModel
+import com.example.myapplication.util.ToastUtil
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class EventDetailFragment : Fragment() {
 
     private var _binding: FragmentEventDetailBinding? = null
     private val binding get() = _binding!!
+    private val favoriteEventViewModel: FavoriteEventViewModel by viewModels()
+    private val viewModel: DetailViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,20 +42,60 @@ class EventDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        showLoading(true) // Show loading indicator when view is created
 
-        val event = arguments?.getParcelable<Event>("event")
-        event?.let {
-            bindEventDetails(it)
-            showLoading(false) // Hide loading indicator after data is bound
-        }
+        val eventId: Int? = arguments?.getInt("eventId")
+        Log.d("EventDetailFragment", "Event ID: $eventId")
+
+        viewModel.fetchEvents(eventId ?: 0)
 
 
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                findNavController().popBackStack()
+        viewModel.event.observe(viewLifecycleOwner, Observer { event ->
+            if (event != null) {
+                bindEventDetails(event)
             }
         })
+
+        if (eventId != null) {
+            updateFavoriteStatus(eventId)
+        }
+
+        binding.loveButton.setOnClickListener { button ->
+            viewModel.event.value?.let { event ->
+                addFavoriteEvent(event, button)
+            }
+        }
+
+        viewModel.isLoadingActive.observe(viewLifecycleOwner, Observer { isLoadingActive ->
+            binding.progressBar.visibility = if (isLoadingActive) View.VISIBLE else View.GONE
+        })
+
+    }
+
+    fun addFavoriteEvent(event: Event, button: View) {
+        button.isEnabled = false // Disable the button to prevent multiple clicks
+        event?.let { event ->
+            lifecycleScope.launch {
+                val isFavorite = favoriteEventViewModel.isFavoriteEvent(event.id)
+                if (!isFavorite) {
+                    val newFavoriteEvent = FavoriteEvent(
+                        id = event.id,
+                        eventName = event.name,
+                        eventSummary = event.summary,
+                        imageLogo = event.imageLogo,
+                        eventDate = event.beginTime,
+                        isFavorite = true,
+                        createdAt = System.currentTimeMillis()
+                    )
+                    favoriteEventViewModel.insertFavoriteEvent(newFavoriteEvent)
+                    ToastUtil.showToast(requireContext(), "Event added to favorites")
+                } else {
+                    favoriteEventViewModel.deleteFavoriteEventById(event.id)
+                    ToastUtil.showToast(requireContext(), "Event removed from favorites")
+                }
+                updateFavoriteStatus(event.id)
+                button.isEnabled = true // Re-enable the button after the action is completed
+            }
+        }
     }
 
     @SuppressLint("SetTextI18n")
@@ -60,7 +109,6 @@ class EventDetailFragment : Fragment() {
         binding.ownerName.text = "Organizer: ${event.ownerName}"
         binding.beginTime.text = "Time: ${event.beginTime}"
         binding.quota.text = "Quota: ${event.quota - event.registrants}"
-//        binding.description.text = HtmlCompat.fromHtml(event.description, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
         binding.description.text = HtmlCompat.fromHtml(event.description ?: "No description available", HtmlCompat.FROM_HTML_MODE_LEGACY)
         binding.linkButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(event.link))
@@ -73,11 +121,14 @@ class EventDetailFragment : Fragment() {
         _binding = null
     }
 
-    private fun showLoading(isLoading: Boolean) {
-        if (isLoading) {
-            binding.progressBar.visibility = View.VISIBLE
-        } else {
-            binding.progressBar.visibility = View.GONE
-        }
+    private fun updateFavoriteStatus(id: Int) {
+        favoriteEventViewModel.getFavoriteEventById(id).observe(viewLifecycleOwner, Observer { favoriteEvent ->
+            Log.d("EventDetailFragment", "Favorite event: $favoriteEvent")
+            if (favoriteEvent != null) {
+                binding.loveButton.setImageResource(R.drawable.baseline_favorite_444) // Set a different icon
+            } else {
+                binding.loveButton.setImageResource(R.drawable.baseline_favorite_24) // Set a different icon
+            }
+        })
     }
 }

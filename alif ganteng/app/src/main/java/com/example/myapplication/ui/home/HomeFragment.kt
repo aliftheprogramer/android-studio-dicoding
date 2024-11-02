@@ -10,7 +10,9 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.databinding.FragmentHomeBinding
 import com.example.myapplication.ui.EventsAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
@@ -75,6 +77,10 @@ class HomeFragment : Fragment() {
     private fun showCompletedEventsLoading(isLoading: Boolean) {
         binding.progressBarCompleted.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
+
+//    private fun showNoInternetConnection(isNoInternet: Boolean) {
+//        binding.noInternetConnection.visibility = if (isNoInternet) View.VISIBLE else View.GONE
+//    }
 
     override fun onDestroyView() {
         super.onDestroyView()

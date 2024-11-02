@@ -6,17 +6,23 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.myapplication.data.response.Event
 import com.example.myapplication.data.response.EventsResponse
-import com.example.myapplication.data.retrofit.ApiConfig
+import com.example.myapplication.domain.repository.MyRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-class ComingSoonViewModel : ViewModel() {
+
+@HiltViewModel
+class ComingSoonViewModel @Inject constructor(
+    private val repository: MyRepository
+): ViewModel() {
     private val _events = MutableLiveData<List<Event>>()
     val events: LiveData<List<Event>> = _events
 
     fun fetchActiveEvents() {
-        val client = ApiConfig.getApiService().getActiveEvents()
+        val client = repository.getActiveEvents()
         client.enqueue(object : Callback<EventsResponse> {
             override fun onResponse(call: Call<EventsResponse>, response: Response<EventsResponse>) {
                 if (response.isSuccessful) {
@@ -35,7 +41,7 @@ class ComingSoonViewModel : ViewModel() {
     }
 
     fun searchEvents(query: String) {
-        val client = ApiConfig.getApiService().searchEvents(query, 1)
+        val client = repository.searchEventsActive(query)
         client.enqueue(object : Callback<EventsResponse> {
             override fun onResponse(call: Call<EventsResponse>, response: Response<EventsResponse>) {
                 if (response.isSuccessful) {

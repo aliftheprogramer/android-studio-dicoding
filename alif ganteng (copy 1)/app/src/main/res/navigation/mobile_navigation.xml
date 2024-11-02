@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.myapplication.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_completedEvent_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment" />
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_coming_soon_event"
+        android:name="com.example.myapplication.ui.comingsoonevent.ComingsoonEvent"
+        android:label="@string/coming_soon"
+        tools:layout="@layout/fragment_comingsoon_event">
+
+        <action
+            android:id="@+id/action_completedEvent_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_completed_event"
+        android:name="com.example.myapplication.ui.completed.CompletedEvent"
+        android:label="@string/event_selesai"
+        tools:layout="@layout/fragment_completed_event">
+
+        <action
+            android:id="@+id/action_completedEvent_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/eventDetailFragment"
+        android:name="com.example.myapplication.ui.detail.EventDetailFragment"
+        android:label="Event Detail"
+        tools:layout="@layout/fragment_event_detail" />
+
+    <fragment
+        android:id="@+id/navigation_favorite_event"
+        android:name="com.example.myapplication.ui.favorite.FavoriteEvent"
+        android:label="@string/favorite"
+        tools:layout="@layout/fragment_favorite_event">
+
+        <action
+            android:id="@+id/action_completedEvent_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.myapplication.ui.settings.Settings"
+        android:label="@string/settings"
+        />
+
+
+</navigation>

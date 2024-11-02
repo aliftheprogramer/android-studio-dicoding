@@ -18,5 +18,9 @@
     <string name="active_events">Active Events</string>
     <string name="completed_events">completed events</string>
     <string name="error_loading_data">Error loading data</string>
+    <string name="favorite">favorite\n</string>
+    <string name="settings">settings\n</string>
+    <string name="event_favorite">favorite\n</string>
+    <string name="dark_mode">Dark Mode\n</string>
 
 </resources>

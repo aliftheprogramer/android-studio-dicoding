@@ -6,17 +6,22 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.myapplication.data.response.Event
 import com.example.myapplication.data.response.EventsResponse
-import com.example.myapplication.data.retrofit.ApiConfig
+import com.example.myapplication.domain.repository.MyRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-class CompletedEventViewModel : ViewModel() {
+@HiltViewModel
+class CompletedEventViewModel @Inject constructor(
+    private val repository: MyRepository
+) : ViewModel() {
     private val _events = MutableLiveData<List<Event>>()
     val events: LiveData<List<Event>> = _events
 
     fun fetchCompletedEvents() {
-        val client = ApiConfig.getApiService().getCompletedEvents()
+        val client = repository.getCompletedEvents()
         client.enqueue(object : Callback<EventsResponse> {
             override fun onResponse(call: Call<EventsResponse>, response: Response<EventsResponse>) {
                 if (response.isSuccessful) {
@@ -35,7 +40,7 @@ class CompletedEventViewModel : ViewModel() {
     }
 
     fun searchEvents(query: String) {
-        val client = ApiConfig.getApiService().searchEvents(query, 0)
+        val client = repository.searchEventsCompleted(query)
         client.enqueue(object : Callback<EventsResponse> {
             override fun onResponse(call: Call<EventsResponse>, response: Response<EventsResponse>) {
                 if (response.isSuccessful) {

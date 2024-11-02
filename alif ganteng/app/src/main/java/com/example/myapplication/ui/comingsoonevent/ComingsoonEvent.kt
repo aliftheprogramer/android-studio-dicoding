@@ -11,7 +11,10 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.databinding.FragmentComingsoonEventBinding
 import com.example.myapplication.ui.EventsAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class ComingsoonEvent : Fragment() {
 
     private var _binding: FragmentComingsoonEventBinding? = null

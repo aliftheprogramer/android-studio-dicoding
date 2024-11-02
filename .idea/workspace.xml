@@ -17,7 +17,221 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ad2c316-3e61-44e9-8ddc-ff8dae5861ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/androidTest/java/com/example/myapplication/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/java/com/example/myapplication/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/java/com/example/myapplication/ui/dashboard/DashboardFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/java/com/example/myapplication/ui/dashboard/DashboardViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/java/com/example/myapplication/ui/home/HomeFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/java/com/example/myapplication/ui/home/HomeViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/java/com/example/myapplication/ui/notifications/NotificationsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/java/com/example/myapplication/ui/notifications/NotificationsViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/drawable/ic_home_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/drawable/ic_notifications_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/layout/fragment_dashboard.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/layout/fragment_notifications.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/app/src/test/java/com/example/myapplication/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlifGantengBanget/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyAlarmManager/app/src/main/java/com/dicoding/myalarmmanager/AlarmReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyAlarmManager/app/src/main/java/com/dicoding/myalarmmanager/DatePickerFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyAlarmManager/app/src/main/java/com/dicoding/myalarmmanager/TimePickerFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyAlarmManager/app/src/main/res/drawable/baseline_access_alarm_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyAlarmManager/app/src/main/res/drawable/baseline_access_time_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyAlarmManager/app/src/main/res/drawable/baseline_date_range_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/androidTest/java/com/dicoding/myapplication/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/java/com/dicoding/myapplication/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/java/com/dicoding/myapplication/ui/dashboard/DashboardFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/java/com/dicoding/myapplication/ui/dashboard/DashboardViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/java/com/dicoding/myapplication/ui/home/HomeFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/java/com/dicoding/myapplication/ui/home/HomeViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/java/com/dicoding/myapplication/ui/notifications/NotificationsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/java/com/dicoding/myapplication/ui/notifications/NotificationsViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/drawable/ic_home_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/drawable/ic_notifications_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/layout/fragment_dashboard.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/layout/fragment_notifications.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/app/src/test/java/com/dicoding/myapplication/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/androidTest/java/com/example/myapplication/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/java/com/example/myapplication/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/java/com/example/myapplication/ui/dashboard/DashboardFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/java/com/example/myapplication/ui/dashboard/DashboardViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/java/com/example/myapplication/ui/home/HomeFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/java/com/example/myapplication/ui/home/HomeViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/java/com/example/myapplication/ui/notifications/NotificationsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/java/com/example/myapplication/ui/notifications/NotificationsViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/drawable/ic_home_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/drawable/ic_notifications_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/layout/fragment_dashboard.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/layout/fragment_notifications.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/app/src/test/java/com/example/myapplication/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApplication2/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBroadcastReceiver/app/src/main/java/com/dicoding/mybroadcastreceiver/SmsReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBroadcastReceiver/app/src/main/java/com/dicoding/mybroadcastreceiver/SmsReceiverActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyBroadcastReceiver/app/src/main/res/layout/activity_sms_receiver.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyWorkManager/app/src/main/java/com/dicoding/myworkmanager/MyWorker.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SimpleNotif/app/src/main/java/com/dicoding/simplenotif/DetailActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SimpleNotif/app/src/main/res/drawable/baseline_notifications_active_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SimpleNotif/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/MyApplication.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/data/database/FavoriteEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/data/database/FavoriteEventDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/data/database/FavoriteEventRoomDatabase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/data/repository/FavoriteEventRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/data/repository/MyRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/di/AppModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/di/DatabaseModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/di/NetworkModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/domain/repository/MyRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/favorite/FavoriteEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/favorite/FavoriteEventViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/favorite/FavoriteEventsAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/settings/Settings.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/settings/SettingsViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/util/ToastUtil.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/drawable/baseline_favorite_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/drawable/baseline_favorite_444.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/drawable/baseline_favorite_border_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/drawable/baseline_settings_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/drawable/rounded_button_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/layout/fragment_favorite_event.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alif ganteng/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/data/response/EventsResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/data/retrofit/ApiConfig.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/data/retrofit/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/data/retrofit/ApiService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/comingsoonevent/ComingSoonViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/comingsoonevent/ComingSoonViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/comingsoonevent/ComingsoonEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/comingsoonevent/ComingsoonEvent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/completed/CompletedEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/completed/CompletedEvent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/completed/CompletedEventViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/completed/CompletedEventViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/detail/EventDetailFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/detail/EventDetailFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/home/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/home/HomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/java/com/example/myapplication/ui/home/HomeViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/res/layout/fragment_comingsoon_event.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/layout/fragment_comingsoon_event.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/res/layout/fragment_completed_event.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/layout/fragment_completed_event.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/res/layout/fragment_event_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/layout/fragment_event_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alif ganteng/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/alif ganteng/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter-project-finish/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/starter-project-finish/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,21 +250,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "aliftheprogramer"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;aliftheprogramer&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/aliftheprogramer/android-studio-dicoding.git",
-    "accountId": "b7c33895-873d-46ce-bf4f-0ee144dfdc71"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/aliftheprogramer/android-studio-dicoding.git&quot;,
+    &quot;accountId&quot;: &quot;b7c33895-873d-46ce-bf4f-0ee144dfdc71&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2nWyxbOVPdzCpSe1DYIzRMVteJe" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -61,13 +275,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "android.gradle.sync.needed": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/punya alip/android-studio-dicoding/alif ganteng",
+    "last_opened_file_path": "/home/aliflosthimself/android-studio-dicoding/WOWOWOWOWOWO/alif ganteng",
     "show.migrate.to.gradle.popup": "false"
   },
   "keyToStringList": {
